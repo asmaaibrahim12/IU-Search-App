@@ -1,0 +1,17 @@
+# Render blueprint — one-click deploy of the IU Course Search app.
+# https://render.com/docs/blueprint-spec
+#
+# After deploying, set ANTHROPIC_API_KEY in the Render dashboard
+# (Environment tab). It is intentionally not stored in this file.
+services:
+  - type: web
+    name: iu-course-search
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false # prompts you to enter the secret in the dashboard
+      - key: MODEL
+        value: claude-opus-4-8 # change to claude-haiku-4-5 for a faster/cheaper demo

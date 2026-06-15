@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate sample dataset
+        run: python -c "import json; c=json.load(open('data/courses.json')); codes=[x['code'] for x in c]; assert len(codes)==len(set(codes)), 'duplicate course codes'; req={'code','title','department','level','credits','instructor','description'}; assert all(req<=set(x) for x in c), 'missing fields'; print(len(c), 'courses OK')"
+
+      - name: Compile app
+        run: python -m py_compile app.py
+
+      - name: Import app (smoke test)
+        env:
+          ANTHROPIC_API_KEY: dummy-key-for-ci # lets the client construct; no API calls are made
+        run: python -c "import app; assert app.app is not None and len(app.COURSES)==36; print('app imports OK')"

@@ -85,4 +85,26 @@ your query ──▶ Flask /api/search ──▶ Claude (catalog in system promp
 
 ---
 
+## Deploy a live demo (Render)
+
+GitHub Pages can't host this app (it has a Python backend and a secret key), but
+the included `render.yaml` makes deploying to [Render](https://render.com) one click:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/asmaaibrahim12/IU-Search-App)
+
+1. Click the button (or: Render dashboard → **New** → **Blueprint** → pick this repo).
+2. When prompted, paste your `ANTHROPIC_API_KEY` (it's never stored in the repo).
+3. Render builds and gives you a public URL — perfect for sharing in the session.
+
+> The free plan sleeps after inactivity, so the first request after a pause takes
+> a few extra seconds to wake up. Hit it once before your demo starts.
+
+## Continuous integration
+
+`.github/workflows/ci.yml` runs on every push and pull request. It installs the
+dependencies, validates the course dataset, and confirms the app imports cleanly —
+a quick safety net so a broken change is caught before the workshop.
+
+---
+
 *This is a teaching demo with a fictional catalog — not an official IU service.*
