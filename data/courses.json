@@ -1,0 +1,326 @@
+[
+  {
+    "code": "CSCI-C 101",
+    "title": "Introduction to Computer Science",
+    "department": "Computer Science",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Priya Natarajan",
+    "description": "A first course in computational thinking and programming using Python. Covers variables, loops, functions, and basic data structures. No prior experience required. Open to all majors."
+  },
+  {
+    "code": "CSCI-B 305",
+    "title": "Data Structures and Algorithms",
+    "department": "Computer Science",
+    "level": "Undergraduate",
+    "credits": 4,
+    "instructor": "Dr. Marcus Webb",
+    "description": "Core data structures (lists, trees, graphs, hash tables) and the algorithms that operate on them. Emphasis on analyzing time and space complexity. Prerequisite: CSCI-C 101."
+  },
+  {
+    "code": "CSCI-B 351",
+    "title": "Introduction to Artificial Intelligence",
+    "department": "Computer Science",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Helen Choi",
+    "description": "Foundations of AI including search, knowledge representation, machine learning, and neural networks. Hands-on projects building intelligent agents."
+  },
+  {
+    "code": "PHIL-P 240",
+    "title": "Ethics and the Information Age",
+    "department": "Philosophy",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Samuel Okafor",
+    "description": "Moral questions raised by computing and data: privacy, algorithmic bias, automation, and the ethics of artificial intelligence. Designed for students from any background; no technical prerequisites."
+  },
+  {
+    "code": "PHIL-P 140",
+    "title": "Introduction to Ethics",
+    "department": "Philosophy",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Eleanor Voss",
+    "description": "Major ethical theories from Aristotle to the present, applied to contemporary dilemmas in medicine, business, and public life. A gateway course for non-majors."
+  },
+  {
+    "code": "BUS-W 211",
+    "title": "Foundations of Entrepreneurship",
+    "department": "Business",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Daniel Reyes",
+    "description": "How new ventures are created and launched. Students develop a business idea, validate it with customers, and pitch to a panel. Covers lean startup methods and basic financing."
+  },
+  {
+    "code": "BUS-A 201",
+    "title": "Introduction to Financial Accounting",
+    "department": "Business",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Karen Liu",
+    "description": "Reading and preparing financial statements, the accounting cycle, and how businesses report performance to investors and regulators."
+  },
+  {
+    "code": "BUS-M 303",
+    "title": "Digital Marketing and Analytics",
+    "department": "Business",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Tessa Brandt",
+    "description": "Strategies for marketing in digital channels: search, social, email, and content. Students measure campaigns with web analytics and present data-driven recommendations."
+  },
+  {
+    "code": "PSY-P 101",
+    "title": "Introductory Psychology",
+    "department": "Psychology",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Aisha Rahman",
+    "description": "A survey of human behavior and mental processes: perception, memory, development, personality, and mental health. The foundation course for the psychology major."
+  },
+  {
+    "code": "PSY-P 326",
+    "title": "Behavioral Neuroscience",
+    "department": "Psychology",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Aisha Rahman",
+    "description": "How the brain produces behavior. Topics include neurons, brain anatomy, sensation, emotion, learning, and the biology of psychological disorders."
+  },
+  {
+    "code": "PSY-P 211",
+    "title": "Methods of Experimental Psychology",
+    "department": "Psychology",
+    "level": "Undergraduate",
+    "credits": 4,
+    "instructor": "Dr. Owen Schwartz",
+    "description": "Designing experiments, collecting and analyzing behavioral data, and writing scientific reports. Includes a gentle introduction to statistics for the social sciences."
+  },
+  {
+    "code": "STAT-S 301",
+    "title": "Applied Statistical Methods",
+    "department": "Statistics",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Nina Petrova",
+    "description": "Practical statistics for researchers and analysts: summarizing data, confidence intervals, hypothesis testing, and regression. Uses real datasets and statistical software rather than heavy mathematical proofs."
+  },
+  {
+    "code": "DSCI-D 200",
+    "title": "Foundations of Data Science",
+    "department": "Data Science",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Helen Choi",
+    "description": "An applied, code-light introduction to working with data: cleaning, visualizing, and drawing conclusions. Aimed at students from any discipline who want to make sense of data."
+  },
+  {
+    "code": "DSCI-D 410",
+    "title": "Machine Learning in Practice",
+    "department": "Data Science",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Marcus Webb",
+    "description": "Building and evaluating predictive models with modern Python libraries. Covers regression, classification, clustering, and responsible deployment. Prerequisite: DSCI-D 200 or STAT-S 301."
+  },
+  {
+    "code": "ENG-W 203",
+    "title": "Creative Writing: Fiction and Poetry",
+    "department": "English",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Lena Hartwell",
+    "description": "A workshop for new writers. Read widely and produce original short stories and poems, giving and receiving constructive feedback in a supportive studio setting."
+  },
+  {
+    "code": "ENG-L 204",
+    "title": "Introduction to Literary Analysis",
+    "department": "English",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Lena Hartwell",
+    "description": "Close reading of novels, plays, and poems, with attention to how literature reflects culture and history. Builds the writing and argument skills used across the humanities."
+  },
+  {
+    "code": "HIST-H 220",
+    "title": "American History Since 1865",
+    "department": "History",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Gregory Mason",
+    "description": "The United States from Reconstruction to the present: industrialization, civil rights, war, and the rise of modern media. Emphasis on primary sources and historical argument."
+  },
+  {
+    "code": "HIST-W 300",
+    "title": "Technology and Society in World History",
+    "department": "History",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Gregory Mason",
+    "description": "How inventions from the printing press to the internet reshaped human societies. Explores the social consequences of technological change across centuries and cultures."
+  },
+  {
+    "code": "BIOL-L 211",
+    "title": "Molecular Biology and Genetics",
+    "department": "Biology",
+    "level": "Undergraduate",
+    "credits": 4,
+    "instructor": "Dr. Carla Mendes",
+    "description": "DNA, genes, and how cells use genetic information. Includes laboratory work in modern molecular techniques. A core course for biology and pre-health students."
+  },
+  {
+    "code": "BIOL-E 310",
+    "title": "Ecology and Conservation",
+    "department": "Biology",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Thomas Ngata",
+    "description": "How organisms interact with their environment and each other, and what that means for protecting biodiversity in a changing climate. Field trips included."
+  },
+  {
+    "code": "SPEA-V 264",
+    "title": "Urban Sustainability and Climate Policy",
+    "department": "Public and Environmental Affairs",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Ravi Kapoor",
+    "description": "How cities respond to climate change through policy, planning, and community action. Covers energy, transportation, and equity in environmental decision-making."
+  },
+  {
+    "code": "SPEA-H 320",
+    "title": "Introduction to Public Health",
+    "department": "Public and Environmental Affairs",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Monica Alvarez",
+    "description": "The science and policy of keeping populations healthy: epidemiology, prevention, health systems, and the social factors that shape well-being."
+  },
+  {
+    "code": "MUS-Z 201",
+    "title": "History of Rock and Popular Music",
+    "department": "Music",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Jerome Banks",
+    "description": "From blues and jazz roots to hip-hop and electronic music. Listen critically and understand how popular music reflects social movements. No musical background required."
+  },
+  {
+    "code": "MUS-T 113",
+    "title": "Fundamentals of Music Theory",
+    "department": "Music",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Sofia Marchetti",
+    "description": "Notation, scales, chords, and rhythm. The building blocks for reading and writing music. Designed for beginners and self-taught musicians."
+  },
+  {
+    "code": "EDUC-W 200",
+    "title": "Using Technology in Teaching",
+    "department": "Education",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Bethany Cole",
+    "description": "How educators use digital tools to design engaging lessons and assess learning. Hands-on practice with classroom technology and an introduction to AI tutoring tools."
+  },
+  {
+    "code": "EDUC-P 251",
+    "title": "Educational Psychology",
+    "department": "Education",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Bethany Cole",
+    "description": "How students learn and stay motivated. Applies psychological research to teaching practice, classroom management, and supporting diverse learners."
+  },
+  {
+    "code": "ECON-E 201",
+    "title": "Introduction to Microeconomics",
+    "department": "Economics",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Felix Brandt",
+    "description": "How individuals and firms make decisions and how markets allocate resources. Covers supply and demand, competition, and the role of government."
+  },
+  {
+    "code": "ECON-E 370",
+    "title": "Data and Economic Decisions",
+    "department": "Economics",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Nina Petrova",
+    "description": "Using data to answer economic and policy questions. Students learn to read evidence critically and run simple analyses, with minimal prior math required."
+  },
+  {
+    "code": "JOUR-J 210",
+    "title": "Digital Storytelling and Media",
+    "department": "Journalism",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Maya Donovan",
+    "description": "Reporting and storytelling across text, audio, video, and social platforms. Students produce a multimedia portfolio and learn the ethics of digital journalism."
+  },
+  {
+    "code": "INFO-I 300",
+    "title": "Human-Computer Interaction and Design",
+    "department": "Informatics",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Helen Choi",
+    "description": "Designing technology that people actually want to use. Covers user research, prototyping, usability testing, and accessibility. Project-based and open to non-programmers."
+  },
+  {
+    "code": "INFO-I 202",
+    "title": "Social Informatics",
+    "department": "Informatics",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Samuel Okafor",
+    "description": "How information technology shapes society and vice versa: social media, surveillance, the digital divide, and the future of work. Reading and discussion intensive."
+  },
+  {
+    "code": "MATH-M 211",
+    "title": "Calculus I",
+    "department": "Mathematics",
+    "level": "Undergraduate",
+    "credits": 4,
+    "instructor": "Dr. Owen Schwartz",
+    "description": "Limits, derivatives, and integrals with applications in science and engineering. The first course in the calculus sequence."
+  },
+  {
+    "code": "MATH-D 116",
+    "title": "Mathematics for Everyday Life",
+    "department": "Mathematics",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Prof. Karen Liu",
+    "description": "Practical math for citizens and consumers: interpreting statistics in the news, personal finance, probability, and spotting misleading numbers. For students nervous about math."
+  },
+  {
+    "code": "NURS-B 244",
+    "title": "Foundations of Nursing Practice",
+    "department": "Nursing",
+    "level": "Undergraduate",
+    "credits": 4,
+    "instructor": "Prof. Diane Ferraro",
+    "description": "Core clinical skills and the science of patient care. Combines lab simulations with the ethical and communication foundations of the nursing profession."
+  },
+  {
+    "code": "POLS-Y 103",
+    "title": "Introduction to American Politics",
+    "department": "Political Science",
+    "level": "Undergraduate",
+    "credits": 3,
+    "instructor": "Dr. Gregory Mason",
+    "description": "How American government works: the Constitution, elections, Congress, the courts, and the role of citizens. Connects current events to enduring debates."
+  },
+  {
+    "code": "CSCI-B 565",
+    "title": "Data Mining (Graduate)",
+    "department": "Computer Science",
+    "level": "Graduate",
+    "credits": 3,
+    "instructor": "Dr. Marcus Webb",
+    "description": "Advanced techniques for discovering patterns in large datasets: clustering, association rules, dimensionality reduction, and scalable algorithms. For graduate students with a programming and statistics background."
+  }
+]

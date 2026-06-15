@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IU Course Search · AI-powered</title>
+  <style>
+    :root {
+      --crimson: #990000;
+      --crimson-dark: #6f0000;
+      --cream: #f5f1e6;
+      --ink: #211d16;
+      --muted: #6b6354;
+      --card: #ffffff;
+      --line: #e4ddca;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--crimson);
+      color: var(--cream);
+      padding: 2.4rem 1.5rem 2.6rem;
+      text-align: center;
+    }
+    header .badge {
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+    header h1 {
+      margin: 0.5rem 0 0.3rem;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0;
+      font-style: italic;
+      opacity: 0.92;
+    }
+    main {
+      max-width: 760px;
+      margin: -1.6rem auto 4rem;
+      padding: 0 1.2rem;
+    }
+    .search-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(40, 20, 0, 0.10);
+      padding: 1.3rem;
+    }
+    .search-row { display: flex; gap: 0.6rem; }
+    #q {
+      flex: 1;
+      font-family: inherit;
+      font-size: 1.05rem;
+      padding: 0.8rem 1rem;
+      border: 1.5px solid var(--line);
+      border-radius: 9px;
+      background: #fffdf7;
+      color: var(--ink);
+    }
+    #q:focus { outline: none; border-color: var(--crimson); }
+    button.go {
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--cream);
+      background: var(--crimson);
+      border: none;
+      border-radius: 9px;
+      padding: 0 1.5rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    button.go:hover { background: var(--crimson-dark); }
+    button.go:disabled { opacity: 0.55; cursor: progress; }
+    .chips {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+    .chips span.label {
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      align-self: center;
+      margin-right: 0.2rem;
+    }
+    .chip {
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.82rem;
+      background: #f0ead7;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.3rem 0.75rem;
+      cursor: pointer;
+      color: var(--crimson-dark);
+    }
+    .chip:hover { background: #e8dfc4; }
+
+    #status {
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 1.4rem 0 0.4rem;
+      min-height: 1.2em;
+    }
+    .results { margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.85rem; }
+    .result {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--crimson);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+    }
+    .result .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .result .code {
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--crimson);
+    }
+    .result h3 { margin: 0.15rem 0 0.4rem; font-size: 1.2rem; }
+    .result .meta {
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+    .result .desc { font-size: 0.96rem; }
+    .result .reason {
+      margin-top: 0.7rem;
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--crimson-dark);
+      background: #faf4e3;
+      border-radius: 7px;
+      padding: 0.5rem 0.7rem;
+    }
+    .relevance {
+      flex-shrink: 0;
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.72rem;
+      text-align: right;
+      color: var(--muted);
+    }
+    .bar { width: 90px; height: 6px; background: var(--line); border-radius: 4px; margin-top: 3px; overflow: hidden; }
+    .bar > div { height: 100%; background: var(--crimson); }
+    footer {
+      text-align: center;
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding-bottom: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="badge">Indiana University · Demo</div>
+    <h1>Course Search</h1>
+    <p>Ask in plain language — Claude finds courses that fit your meaning, not just keywords.</p>
+  </header>
+
+  <main>
+    <div class="search-card">
+      <div class="search-row">
+        <input id="q" type="text" autocomplete="off"
+               placeholder="e.g. courses about ethics for non-CS majors" />
+        <button class="go" id="go">Search</button>
+      </div>
+      <div class="chips">
+        <span class="label">Try</span>
+        <span class="chip">learn about the brain</span>
+        <span class="chip">analyze data without heavy math</span>
+        <span class="chip">starting a company</span>
+        <span class="chip">climate and sustainability</span>
+        <span class="chip">creative writing</span>
+      </div>
+    </div>
+
+    <div id="status"></div>
+    <div class="results" id="results"></div>
+  </main>
+
+  <footer>Powered by Claude · sample catalog of 36 courses</footer>
+
+  <script>
+    const qEl = document.getElementById("q");
+    const goEl = document.getElementById("go");
+    const statusEl = document.getElementById("status");
+    const resultsEl = document.getElementById("results");
+
+    function escapeHtml(s) {
+      const d = document.createElement("div");
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    async function runSearch() {
+      const query = qEl.value.trim();
+      if (!query) { qEl.focus(); return; }
+
+      goEl.disabled = true;
+      resultsEl.innerHTML = "";
+      statusEl.textContent = "Claude is reading the catalog…";
+      const started = performance.now();
+
+      try {
+        const res = await fetch("/api/search", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Search failed.");
+
+        const secs = ((performance.now() - started) / 1000).toFixed(1);
+        renderResults(data, secs);
+      } catch (err) {
+        statusEl.textContent = "⚠️ " + err.message;
+      } finally {
+        goEl.disabled = false;
+      }
+    }
+
+    function renderResults(data, secs) {
+      if (!data.results.length) {
+        statusEl.textContent = `No strong matches for "${data.query}". Try rephrasing.`;
+        return;
+      }
+      const u = data.usage || {};
+      const cached = u.cache_read_tokens
+        ? ` · ${u.cache_read_tokens.toLocaleString()} catalog tokens served from cache`
+        : " · catalog cached for next time";
+      statusEl.textContent =
+        `${data.results.length} matches in ${secs}s${cached}`;
+
+      resultsEl.innerHTML = data.results.map((c) => `
+        <div class="result">
+          <div class="top">
+            <div>
+              <div class="code">${escapeHtml(c.code)}</div>
+              <h3>${escapeHtml(c.title)}</h3>
+            </div>
+            <div class="relevance">
+              ${c.relevance}% match
+              <div class="bar"><div style="width:${Math.max(0, Math.min(100, c.relevance))}%"></div></div>
+            </div>
+          </div>
+          <div class="meta">${escapeHtml(c.department)} · ${c.credits} credits · ${escapeHtml(c.level)} · ${escapeHtml(c.instructor)}</div>
+          <div class="desc">${escapeHtml(c.description)}</div>
+          <div class="reason">Why it matches: ${escapeHtml(c.reason)}</div>
+        </div>
+      `).join("");
+    }
+
+    goEl.addEventListener("click", runSearch);
+    qEl.addEventListener("keydown", (e) => { if (e.key === "Enter") runSearch(); });
+    document.querySelectorAll(".chip").forEach((chip) => {
+      chip.addEventListener("click", () => { qEl.value = chip.textContent; runSearch(); });
+    });
+  </script>
+</body>
+</html>
