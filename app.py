@@ -40,8 +40,9 @@ def format_catalog(courses: list[dict]) -> str:
     return "\n\n".join(blocks)
 
 
-SYSTEM_PROMPT = f"""You are the semantic search engine for the Indiana University \
-course catalog. A student describes what they are looking for in plain language, \
+SYSTEM_PROMPT = f"""You are the semantic search engine for the IU International \
+University of Applied Sciences course catalog. A student describes what they are \
+looking for in plain language, \
 and you return the courses that genuinely fit their intent.
 
 Rank by how well each course matches the *meaning* of the request, not just shared \
