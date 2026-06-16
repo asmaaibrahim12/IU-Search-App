@@ -99,6 +99,19 @@ the included `render.yaml` makes deploying to [Render](https://render.com) one c
 > The free plan sleeps after inactivity, so the first request after a pause takes
 > a few extra seconds to wake up. Hit it once before your demo starts.
 
+## Deploy a live demo (Railway)
+
+`Procfile` and `railway.json` are included, so [Railway](https://railway.app) runs
+the app with no extra setup:
+
+1. Railway dashboard → **New Project** → **Deploy from GitHub repo** → pick `IU-Search-App`.
+2. Open the service → **Variables** → add `ANTHROPIC_API_KEY` (and optionally
+   `MODEL=claude-haiku-4-5` for a faster demo).
+3. **Settings → Networking → Generate Domain** to get a public URL.
+
+Railway auto-detects Python, installs `requirements.txt`, and starts the app with
+`gunicorn` on the port it provides — no code changes needed.
+
 ## Continuous integration
 
 `.github/workflows/ci.yml` runs on every push and pull request. It installs the
